@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div></div>
-        <p>
+        <p style={{cursor: "pointer"}}>
           © {new Date().getFullYear()} Zofro Coffee Company. All rights
           reserved.
         </p>
