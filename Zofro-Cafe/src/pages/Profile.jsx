@@ -4,7 +4,8 @@ import "./profile.css";
 import { FaUserCircle, FaPen } from "react-icons/fa";
 import { FaChevronRight, FaSignOutAlt } from "react-icons/fa";
 
-const Profile = () => {
+
+const Profile = ({ setIsLoggedIn }) => {
   const menuItems = [
     "Orders",
     "My Address",
@@ -38,7 +39,10 @@ const Profile = () => {
           </div>
 
           <div className="logout-section">
-            <button className="logout-btn">
+            <button
+              className="logout-btn"
+              onClick={() =>  setIsLoggedIn(false)}
+            >
               Log Out
               <FaSignOutAlt className="logout-icon" />
             </button>
