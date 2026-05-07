@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Profile from "./Profile";
 import "./Account.css";
 import { FaUserCircle } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 const Account = () => {
 
@@ -43,9 +44,9 @@ const Account = () => {
             </div>
 
           </div>
-
         </div>
       )}
+      <Footer/>
     </>
   );
 };
