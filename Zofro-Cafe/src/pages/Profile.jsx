@@ -49,7 +49,6 @@ const Profile = ({ setIsLoggedIn }) => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
