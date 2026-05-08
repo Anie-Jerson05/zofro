@@ -1,0 +1,237 @@
+/* Full Page */
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #c7ab8f;
+  color: #2b1a12;
+
+  overflow-x: hidden;
+}
+
+/* Hero Image */
+.about-hero img {
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+  display: block;
+}
+
+/* Service Section */
+.about-service {
+  padding: 25px 20px;
+}
+
+.about-service h1 {
+  font-size: 52px;
+  color: #824822;
+
+  margin-bottom: 15px;
+}
+
+.about-service p {
+  font-size: 18px;
+  line-height: 1.7;
+
+  margin-bottom: 15px;
+}
+
+/* Product Section */
+.product-section {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  background: #d8bea3;
+
+  padding: 20px;
+}
+
+/* Product Image */
+.product-image img {
+  width: 230px;
+  height: 230px;
+
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Product Content */
+.product-content {
+  flex: 1;
+}
+
+.product-content h1 {
+  font-size: 46px;
+  color: #824822;
+
+  margin-bottom: 15px;
+}
+
+.product-content p {
+  font-size: 17px;
+  line-height: 1.6;
+
+  margin-bottom: 10px;
+}
+
+.about-service h1,
+.product-content h1,
+.choose-section h1,
+.location-content h1,
+.developer-section h1 {
+  font-family: "Playfair Display", serif;
+}
+
+.about-service p,
+.product-content p,
+.choose-section p,
+.location-content p,
+.developer-section p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* WHY CHOOSE US */
+.choose-section {
+  padding: 30px 20px;
+  background: #c7ab8f;
+}
+
+.choose-section h1 {
+  font-size: 42px;
+  color: #824822;
+  margin-bottom: 15px;
+}
+
+.choose-section p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* CAFE IMAGE */
+.cafe-image img {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+  display: block;
+}
+
+/* LOCATION SECTION */
+.location-section {
+  display: flex;
+  gap: 20px;
+
+  padding: 25px 20px;
+
+  background: #d2b495;
+}
+
+/* LEFT CONTENT */
+.location-content {
+  flex: 1;
+}
+
+.location-content h1 {
+  font-size: 36px;
+  color: #7a4a28;
+  margin-bottom: 15px;
+}
+
+.location-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.location-content button {
+  margin-top: 20px;
+
+  padding: 12px 30px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #7a4a28;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.location-content button:hover {
+  transform: scale(1.05);
+}
+
+/* MAP */
+.map-image img {
+  width: 220px;
+  height: 220px;
+
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* DEVELOPER SECTION */
+.developer-section {
+  padding: 30px 20px;
+
+  background: #824822;
+  color: white;
+}
+
+.developer-section h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* FLEX */
+.developer-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* IMAGE */
+.developer-content img {
+  width: 200px;
+  height: 220px;
+
+  object-fit: cover;
+}
+
+/* TEXT */
+.developer-text {
+  flex: 1;
+}
+
+.developer-text p {
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.developer-text h3 {
+  margin-top: 15px;
+}
+
+.developer-text span {
+  color: #f5e6d3;
+  display: block;
+}
+
+.contact-content{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+.developer-text span {
+  display: inline;
+  font-weight: 900;
+}
