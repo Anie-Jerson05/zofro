@@ -230,6 +230,7 @@ export default function CoffeeCarousel() {
               textTransform: "uppercase",
               color: "#7A4E2D",
               margin: "0 0 8px 0",
+              paddingTop: "30px"
             }}
           >
             Today's Selection
