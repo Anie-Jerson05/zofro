@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   padding-top: 2%;
+  cursor: default;
 }
 
 .favorite-page h2 {
