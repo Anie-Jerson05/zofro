@@ -68,7 +68,7 @@
 
 /* TITLE */
 .empty-cart h1 {
-  font-size: 85px;
+  font-size: 65px;
   color: #ece3db;
 
   text-align: center;
@@ -80,7 +80,8 @@
 
 /* IMAGE */
 .empty-cart img {
-  width: 420px;
+  width: 400px;
+  height: 400px;
 
   object-fit: contain;
 }
