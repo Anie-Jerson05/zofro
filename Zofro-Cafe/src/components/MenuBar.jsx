@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Favorite from "./Favorite";
+import Coustomize from "./Customize";
 import "./menuBar.css";
 
 import { FaRegHeart } from "react-icons/fa";
@@ -60,8 +61,8 @@ const MenuBar = () => {
           </>
         )}
       </div>
-      {/* SEARCH PAGE */}
       {activeButton === "favorite" && <Favorite />}
+      {activeButton === "coffee" && <Coustomize />}
     </div>
   );
 };
