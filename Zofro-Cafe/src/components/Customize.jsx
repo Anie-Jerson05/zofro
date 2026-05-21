@@ -24,15 +24,24 @@ const Customize = () => {
   //CUP NAME
   const [cupName, setCupName] = useState("");
 
+  const [added, setAdded] = useState(false);
+
   // ADD TO CART
   const handleCart = () => {
-    alert(`
-Coffee : ${coffeeType}
-Strength : ${strength}
-Sugar : ${sugarLevels[sugarIndex]}
-Cup Size : ${cupSize}
-Name : ${userName}
-    `);
+    setAdded(true);
+
+    setTimeout(() => {
+      setAdded(false);
+    }, 2000);
+
+    //     alert(`
+    // Coffee : ${coffeeType}
+    // Strength : ${strength}
+    // Sugar : ${sugarLevels[sugarIndex]}
+    // Cup Size : ${cupSize}
+    // Name : ${userName}
+    //     `);
+
     setCoffeeType("Espresso");
     setStrength("Regular");
     setSugarIndex(0);
@@ -201,7 +210,7 @@ Name : ${userName}
           <h2 className="cup-name">{cupName}</h2>
         </div>
         <button className="cart-btn" onClick={handleCart}>
-          Add To Cart
+          {added ? "✓ Added" : "Add Item"}
         </button>
       </div>
     </div>
