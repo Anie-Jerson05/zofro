@@ -21,7 +21,7 @@ const Login = ({ setIsLoggedIn, setShowLogin }) => {
           <span className="big-text">Welcome Back,</span>
 
           <span className="small-text">
-            Please login to <br />
+            Please login to 
             your account
           </span>
         </p>
