@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Profile from "./Profile";
 import Login from "../components/Login";
+import SignUp from "../components/Signup";
 
 import "./Account.css";
 
@@ -11,6 +12,8 @@ import Footer from "../components/Footer";
 
 const Account = () => {
   const [showLogin, setShowLogin] = useState(false);
+
+  const [showSignUp, setShowSignUp] = useState(false);
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -41,7 +44,14 @@ const Account = () => {
               </button>
 
               {/* SIGNUP */}
-              <button className="signup-btn">Sign Up</button>
+              <button
+                className="signup-btn"
+                onClick={() => {
+                  setShowSignUp(true);
+                }}
+              >
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
@@ -49,6 +59,7 @@ const Account = () => {
 
       <Footer />
       {showLogin && <Login setIsLoggedIn={setIsLoggedIn} setShowLogin={setShowLogin} />}
+      {showSignUp && <SignUp setIsLoggedIn={setIsLoggedIn} setShowSignUp={setShowSignUp} setShowLogin={setShowLogin} />}
     </>
   );
 };
