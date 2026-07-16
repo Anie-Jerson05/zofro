@@ -1,12 +1,12 @@
 import React from "react";
 import "./home.css";
-import Footer from "../components/Footer";
 import coffee from "../assets/coffee.png";
 import ambassitor from "../assets/ambassitor.png";
 import centerBg from "../assets/centerBg.png";
 import CoffeeCarousel from "../components/CoffeeCarousel";
 import SplitText from "../components/SplitText";
 import ShinyText from "../components/ShinyText";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -20,10 +20,10 @@ const Home = () => {
 
             {/* <p>A ROSTED</p>
             <h1>Coffee</h1> */}
-          </div>
 
+          </div>
           <img src={coffee} alt="coffee" className="hero-image" />
-        </div>
+          </div>
 
         <div className="hero-right">
           <ShinyText
@@ -38,6 +38,7 @@ const Home = () => {
           {/* <p>
             “Sip the <br></br> comfort.”
           </p> */}
+          
         </div>
       </section>
 
@@ -49,7 +50,7 @@ const Home = () => {
           className="marion"
           style={{ backgroundImage: `url(${centerBg})`  }}
         >
-          <div className="marion-overlay"></div>
+          {/* <div className="marion-overlay"></div> */}
           <div className="marion-content">
             {/* <img src={centerBg} alt="center background" className="centerBg" /> */}
             <h1>Marion Cotillard: </h1>
