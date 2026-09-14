@@ -1,0 +1,138 @@
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+
+.con {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: beige;
+  margin-top: 20px;
+}
+.con .img-con{
+  width: 35%;
+  overflow: hidden;
+}
+
+.img-con img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.text-con{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.text-con h2{
+  margin-bottom: 10px;
+}
+
+.text-con p{
+  height: 36px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.text-con .name-fav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-con .name-fav button{
+  border: none;
+  color: #734120;
+  cursor: pointer;
+  border-radius: 50px;
+  /* background-color: #734120; */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.price-rate .rate{
+  color: #734120;
+}
+.price-rate{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.but-con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.qat-con button{
+ font-size: 20px;
+ font-weight: 700;
+ border: none;
+ background-color: #734120;
+ border-radius: 200px;
+ padding: 10px 20px;
+ color: #F5EDD6;
+ cursor: pointer;
+}
+
+.qat-con span{
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.but-con .but button , .order-but{
+  color: #F5EDD6;
+  border: none;
+  padding: 10px 26px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background-color: #734120;
+}
+
+.cart{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.items{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order{
+   width: 40%;
+   display: flex;
+   justify-content: flex-end;
+   margin-top: 8%;
+}
+
+.order-con{
+  width: 60%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  background-color: beige;
+}
+
+.order-but{
+  font-size: 18px;
+}
