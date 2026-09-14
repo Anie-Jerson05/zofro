@@ -1,0 +1,162 @@
+[
+  {
+    "name": "Classic Espresso",
+    "price": 120,
+    "description": "Rich and bold espresso made from freshly roasted coffee beans.",
+    "rating": 4.8,
+    "image": "/prodects/classic-espresso.png",
+    "category": "Coffee"
+  },
+  {
+    "name": "Cappuccino",
+    "price": 160,
+    "description": "Smooth espresso topped with steamed milk and creamy foam.",
+    "rating": 4.7,
+    "image": "/prodects/cappuccino.png",
+    "category": "Coffee"
+  },
+  {
+    "name": "Cafe Latte",
+    "price": 170,
+    "description": "A smooth blend of espresso and steamed milk with a creamy finish.",
+    "rating": 4.6,
+    "image": "/prodects/cafe-latte.png",
+    "category": "Coffee"
+  },
+  {
+    "name": "Mocha",
+    "price": 190,
+    "description": "Delicious espresso combined with chocolate and steamed milk.",
+    "rating": 4.8,
+    "image": "/prodects/mocha.png",
+    "category": "Coffee"
+  },
+  {
+    "name": "Americano",
+    "price": 140,
+    "description": "Espresso diluted with hot water for a smooth and refreshing coffee.",
+    "rating": 4.5,
+    "image": "/prodects/americano.png",
+    "category": "Coffee"
+  },
+  {
+    "name": "Caramel Macchiato",
+    "price": 210,
+    "description": "Espresso layered with steamed milk and sweet caramel flavor.",
+    "rating": 4.9,
+    "image": "/prodects/caramel-macchiato.jpg",
+    "category": "Coffee"
+  },
+  {
+    "name": "Cold Coffee",
+    "price": 180,
+    "description": "Chilled creamy coffee blended with milk and ice.",
+    "rating": 4.7,
+    "image": "/prodects/cold-coffee.jpg",
+    "category": "Cold Coffee"
+  },
+  {
+    "name": "Iced Latte",
+    "price": 190,
+    "description": "Refreshing iced espresso mixed with chilled creamy milk.",
+    "rating": 4.6,
+    "image": "/prodects/iced-latte.jpg",
+    "category": "Cold Coffee"
+  },
+  {
+    "name": "Chocolate Frappe",
+    "price": 220,
+    "description": "A rich chocolate frappe blended with coffee, milk and ice.",
+    "rating": 4.8,
+    "image": "/prodects/chocolate-frappe.jpg",
+    "category": "Cold Coffee"
+  },
+  {
+    "name": "Vanilla Frappe",
+    "price": 220,
+    "description": "Creamy vanilla frappe with a smooth coffee flavor.",
+    "rating": 4.7,
+    "image": "/prodects/vanilla-frappe.jpg",
+    "category": "Cold Coffee"
+  },
+  {
+    "name": "Hazelnut Coffee",
+    "price": 200,
+    "description": "Aromatic coffee infused with delicious roasted hazelnut flavor.",
+    "rating": 4.8,
+    "image": "/prodects/hazelnut-coffee.jpg",
+    "category": "Special Coffee"
+  },
+  {
+    "name": "Irish Cream Coffee",
+    "price": 210,
+    "description": "Smooth coffee with a rich and creamy Irish cream inspired flavor.",
+    "rating": 4.7,
+    "image": "/prodects/irish-cream-coffee.jpg",
+    "category": "Special Coffee"
+  },
+  {
+    "name": "Chocolate Croissant",
+    "price": 130,
+    "description": "Flaky buttery croissant filled with delicious chocolate.",
+    "rating": 4.6,
+    "image": "/prodects/chocolate-croissant.jpg",
+    "category": "Bakery"
+  },
+  {
+    "name": "Butter Croissant",
+    "price": 110,
+    "description": "Freshly baked golden croissant with a soft buttery center.",
+    "rating": 4.5,
+    "image": "/prodects/butter-croissant.jpg",
+    "category": "Bakery"
+  },
+  {
+    "name": "Blueberry Muffin",
+    "price": 120,
+    "description": "Soft and fluffy muffin filled with juicy blueberries.",
+    "rating": 4.7,
+    "image": "/prodects/blueberry-muffin.jpg",
+    "category": "Bakery"
+  },
+  {
+    "name": "Chocolate Brownie",
+    "price": 140,
+    "description": "Rich and fudgy chocolate brownie with a soft center.",
+    "rating": 4.9,
+    "image": "/prodects/chocolate-brownie.jpg",
+    "category": "Dessert"
+  },
+  {
+    "name": "Classic Cheesecake",
+    "price": 190,
+    "description": "Creamy cheesecake with a smooth texture and buttery crust.",
+    "rating": 4.8,
+    "image": "/prodects/classic-cheesecake.jpg",
+    "category": "Dessert"
+  },
+  {
+    "name": "Chocolate Cake",
+    "price": 180,
+    "description": "Moist chocolate cake covered with a rich chocolate cream layer.",
+    "rating": 4.8,
+    "image": "/prodects/chocolate-cake.jpg",
+    "category": "Dessert"
+  },
+  {
+    "name": "Strawberry Milkshake",
+    "price": 170,
+    "description": "Fresh strawberry blended with chilled milk and creamy ice cream.",
+    "rating": 4.6,
+    "image": "/prodects/strawberry-milkshake.jpg",
+    "category": "Milkshake"
+  },
+  {
+    "name": "Oreo Milkshake",
+    "price": 190,
+    "description": "Creamy milkshake blended with crunchy Oreo cookies.",
+    "rating": 4.9,
+    "image": "/prodects/oreo-milkshake.jpg",
+    "category": "Milkshake"
+  }
+]

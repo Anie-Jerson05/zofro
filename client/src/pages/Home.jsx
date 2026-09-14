@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <div className="home-container">
-      <section className="hero">
+      <div>
         <div className="hero-content">
           <div className="hero-left">
             <SplitText tag="p" text="A ROSTED" />
@@ -40,7 +40,7 @@ const Home = () => {
           </p> */}
           
         </div>
-      </section>
+      </div>
 
       <CoffeeCarousel />
 

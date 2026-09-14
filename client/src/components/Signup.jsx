@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./signup.css";
-
+import axios from "axios";
 import sideLogo from "../assets/zofro-logo.png";
 
-const Signup = ({ setIsLoggedIn, setShowSignUp, setShowLogin }) => {
+const Signup = ({ setIsLoggedIn, setShowSignUp, setShowLogin, setUserEmail }) => {
   // STATES
   const [email, setEmail] = useState("");
 
@@ -17,13 +17,23 @@ const Signup = ({ setIsLoggedIn, setShowSignUp, setShowLogin }) => {
   const [error, setError] = useState("");
 
   // EMAIL VALIDATION
-  const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  // SIGNUP HANDLER
+  // EMPTY CHECK
+
+  // ACCOUNT HANDLER
+  const accountHandler = () => {
+    setShowSignUp(false);
+
+    setShowLogin(true);
   };
 
-  // SIGNUP HANDLER
-  const signupHandler = () => {
-    // EMPTY CHECK
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validateEmail = (email) => {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
     if (!email || !name || !password || !confirmPassword) {
       setError("Please fill all fields");
 
@@ -54,84 +64,94 @@ const Signup = ({ setIsLoggedIn, setShowSignUp, setShowLogin }) => {
     // SUCCESS
     setError("");
 
-    setIsLoggedIn(true);
-
-    setShowSignUp(false);
-  };
-
-  // ACCOUNT HANDLER
-  const accountHandler = () => {
-    setShowSignUp(false);
-
-    setShowLogin(true);
+    try {
+      const result = await axios.post(import.meta.env.VITE_APP_API_URL+"/signup", {
+        name,
+        email,
+        password,
+      });
+      console.log(result.data);
+      setIsLoggedIn(true);
+      setShowSignUp(false);
+      setUserEmail(email);
+    } catch (err) {
+      console.log(err);
+      setError("Signup failed,Please try again later");
+    }
   };
 
   return (
-    <div className="login-page">
-      {/* CARD */}
-      <div className="signup-card">
-        {/* RIGHT */}
-        <div className="signup-right">
-          <img src={sideLogo} alt="Zofro Logo" className="side-logo" />
-        </div>
+    <form onSubmit={handleSubmit}>
+      <div className="login-page">
+        {/* CARD */}
+        <div className="signup-card">
+          {/* RIGHT */}
+          <div className="signup-right">
+            <img src={sideLogo} alt="Zofro Logo" className="side-logo" />
+          </div>
 
-        {/* LEFT */}
-        <div className="signup-left">
-          <p className="welcome-text">
-            <span className="big-text">Create Account</span>
-          </p>
+          {/* LEFT */}
+          <div className="signup-left">
+            <p className="welcome-text">
+              <span className="big-text">Create Account</span>
+            </p>
 
-          {/* EMAIL */}
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+            {/* EMAIL */}
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-          {/* NAME */}
-          <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+            {/* NAME */}
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-          {/* PASSWORD */}
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            {/* PASSWORD */}
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-          {/* CONFIRM PASSWORD */}
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
-          {/* ERROR */}
-          {error && <p className="error-text">{error}</p>}
-          
-          {/* LOGIN LINK */}
-          <p className="have-account" onClick={accountHandler}>
-            I already have an account
-          </p>
+            {/* CONFIRM PASSWORD */}
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+            {/* ERROR */}
+            {error && <p className="error-text">{error}</p>}
 
-          {/* SIGNUP BUTTON */}
-          <button className="glow-btn" onClick={signupHandler}>
-            Sign Up
-          </button>
+            {/* LOGIN LINK */}
+            <p className="have-account" onClick={accountHandler}>
+              I already have an account
+            </p>
 
-          {/* BACK */}
-          <button className="back-btn" onClick={() => setShowSignUp(false)}>
-            Back
-          </button>
+            {/* SIGNUP BUTTON */}
+            <button className="glow-btn" type="submit">
+              Sign Up
+            </button>
+
+            {/* BACK */}
+            <button
+              className="back-btn"
+              type="button"
+              onClick={() => setShowSignUp(false)}
+            >
+              Back
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

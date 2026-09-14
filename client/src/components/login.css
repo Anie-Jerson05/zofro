@@ -186,3 +186,11 @@
   margin-top: 15px;
   cursor: pointer;
 }
+
+.errorMsg {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+}

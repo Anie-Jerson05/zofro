@@ -12,7 +12,18 @@ const items = [
     description:
       "We leave the modern cafe for something ancient and tactile. This image features Turkish Coffee, brewed in a small, hammered copper cezve. It is served in a traditional, highly decorative ceramic fincan cup.",
     price: "$29.31",
-    image: <img src={img1} alt="Stone Ground" style={{ width: 210, height: 230 , objectFit: "cover", borderRadius: 24 }}  />,
+    image: (
+      <img
+        src={img1}
+        alt="Stone Ground"
+        style={{
+          width: 210,
+          height: 230,
+          objectFit: "cover",
+          borderRadius: 24,
+        }}
+      />
+    ),
     bg: "#D4B896",
   },
   {
@@ -21,7 +32,18 @@ const items = [
     description:
       "This image represents the modern, refreshing side of coffee. It features Nitro Cold Brew, served over ice in a tall, clear collins glass. The key visual is the dramatic cascading reverse settle effect.",
     price: "$10.09",
-    image: <img src={img2} alt="The Arctic Obsidian" style={{ width: 210, height: 230 , objectFit: "cover", borderRadius: 24 }} />,
+    image: (
+      <img
+        src={img2}
+        alt="The Arctic Obsidian"
+        style={{
+          width: 210,
+          height: 230,
+          objectFit: "cover",
+          borderRadius: 24,
+        }}
+      />
+    ),
     bg: "#B8C9D4",
   },
   {
@@ -30,7 +52,18 @@ const items = [
     description:
       "To create a striking personal contrast to the black coffee we move to texture and froth. This image features a cappuccino in a deep blue latte art café. The lens is an exclusive viewport into the atmosphere.",
     price: "$12.05",
-    image: <img src={img3} alt="The Velvet Cloud" style={{ width: 210, height: 230 , objectFit: "contain", borderRadius: 24 }} />,
+    image: (
+      <img
+        src={img3}
+        alt="The Velvet Cloud"
+        style={{
+          width: 210,
+          height: 230,
+          objectFit: "contain",
+          borderRadius: 24,
+        }}
+      />
+    ),
     bg: "#F0E6D8",
   },
   {
@@ -39,7 +72,18 @@ const items = [
     description:
       "Following in the footsteps of the café, a rich indulgent affogato, featuring melting cream textures, viscous shots of espresso poured dramatically over vanilla gelato.",
     price: "$17.01",
-    image: <img src={img4} alt="Empire Affogato" style={{ width: 210, height: 230 , objectFit: "cover", borderRadius: 24 }} />,
+    image: (
+      <img
+        src={img4}
+        alt="Empire Affogato"
+        style={{
+          width: 210,
+          height: 230,
+          objectFit: "cover",
+          borderRadius: 24,
+        }}
+      />
+    ),
     bg: "#D4C4A8",
   },
   {
@@ -48,7 +92,18 @@ const items = [
     description:
       "Velvety espresso with house-made caramel drizzle layered over steamed whole milk. A timeless classic with a refined twist for those who appreciate depth in every sip.",
     price: "$9.50",
-    image: <img src={img5} alt="Caramel Signature" style={{ width: 210, height: 230 , objectFit: "cover", borderRadius: 24 }} />,
+    image: (
+      <img
+        src={img5}
+        alt="Caramel Signature"
+        style={{
+          width: 210,
+          height: 230,
+          objectFit: "cover",
+          borderRadius: 24,
+        }}
+      />
+    ),
     bg: "#D4A882",
   },
 ];
@@ -100,7 +155,7 @@ function CarouselCard({ item, onAdd, added }) {
       <div style={{ flex: 1, minWidth: 0 }}>
         <h3
           style={{
-            fontFamily: 'Playfair Display',
+            fontFamily: "Playfair Display",
             paddingBottom: 20,
             fontSize: 30,
             fontWeight: 600,
@@ -154,12 +209,8 @@ function CarouselCard({ item, onAdd, added }) {
               letterSpacing: "0.01em",
             }}
             onMouseEnter={(e) => (e.currentTarget.style.background = "#6B3F23")}
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = added ? "#6B3F23" : "#4A2511")
-            }
-            onMouseDown={(e) =>
-              (e.currentTarget.style.transform = "scale(0.96)")
-            }
+            onMouseLeave={(e) => (e.currentTarget.style.background = added ? "#6B3F23" : "#4A2511")}
+            onMouseDown={(e) => (e.currentTarget.style.transform = "scale(0.96)")}
             onMouseUp={(e) => (e.currentTarget.style.transform = "scale(1)")}
           >
             {added ? "✓ Added" : "Add Item"}
@@ -218,7 +269,6 @@ export default function CoffeeCarousel() {
           position: "relative",
         }}
       >
-       
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 36 }}>
           <p
@@ -230,7 +280,7 @@ export default function CoffeeCarousel() {
               textTransform: "uppercase",
               color: "#7A4E2D",
               margin: "0 0 8px 0",
-              paddingTop: "30px"
+              paddingTop: "30px",
             }}
           >
             Today's Selection

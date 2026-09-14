@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Favorite from "./Favorite";
 import Coustomize from "./Customize";
+import MenuItems from "./MenuItems";
+import SearchBar from "./SearchBar";
 import "./menuBar.css";
 
 import { FaRegHeart } from "react-icons/fa";
@@ -8,23 +10,14 @@ import { IoSearch } from "react-icons/io5";
 import { CiCoffeeCup } from "react-icons/ci";
 
 const MenuBar = () => {
-  const [activeButton, setActiveButton] = useState("");
+  const [activeButton, setActiveButton] = useState(null);
 
   return (
     <div className="menu-page">
       {/* TOP MENU BAR */}
       <div className="menu-top">
         {activeButton === "search" ? (
-          <div className="search-container">
-            <input type="text" placeholder="Search coffee..." />
-
-            <button
-              className="search-btn"
-              onClick={() => setActiveButton(null)}
-            >
-              Search
-            </button>
-          </div>
+          <SearchBar setActiveButton={setActiveButton}/>
         ) : (
           <>
             {/* FAVORITE */}
@@ -63,6 +56,8 @@ const MenuBar = () => {
       </div>
       {activeButton === "favorite" && <Favorite />}
       {activeButton === "coffee" && <Coustomize />}
+      {activeButton === "search" && <MenuItems />}
+      {activeButton === null && <MenuItems />}
     </div>
   );
 };

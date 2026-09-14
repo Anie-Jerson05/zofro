@@ -1,4 +1,3 @@
-import React from "react";
 import "./footer.css";
 import ZofroLogo from "../assets/Zofro-logo.png";
 import facebook from "../assets/facebook.png";

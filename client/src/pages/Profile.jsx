@@ -1,11 +1,9 @@
-import React from "react";
-import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 import "./profile.css";
 import { FaUserCircle, FaPen } from "react-icons/fa";
 import { FaChevronRight, FaSignOutAlt } from "react-icons/fa";
 
-
-const Profile = ({ setIsLoggedIn }) => {
+const Profile = ({ setIsLoggedIn, email }) => {
   const menuItems = [
     "Orders",
     "My Address",
@@ -14,13 +12,39 @@ const Profile = ({ setIsLoggedIn }) => {
     "Help Center",
   ];
 
+  const [Uname, setUname] = useState("user");
+
+  useEffect(() => {
+    if (!email) return;
+
+    fetch("http://localhost:3000/loginUname", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+
+        if (data.success) {
+          setUname(data.name);
+          console.log("Username:", data.name);
+        }
+      })
+      .catch((err) => console.log(err));
+  }, [email]);
+  
   return (
     <>
       <div className="profile-page">
         <div className="profile-container">
           <FaUserCircle className="profile-icon" />
           <h1>
-            Hi, <span>username</span>
+            Hi, <span>{Uname}</span>
           </h1>
 
           <button className="edit-btn">
@@ -39,10 +63,7 @@ const Profile = ({ setIsLoggedIn }) => {
           </div>
 
           <div className="logout-section">
-            <button
-              className="logout-btn"
-              onClick={() =>  setIsLoggedIn(false)}
-            >
+            <button className="logout-btn" onClick={() => setIsLoggedIn(false)}>
               Log Out
               <FaSignOutAlt className="logout-icon" />
             </button>
