@@ -3,7 +3,7 @@ import ProdectCard from "./ProdectCard";
 import "./menuItems.css";
 import {useSearchParams} from 'react-router-dom'
 
-const MenuItems = () => {
+const MenuItems = ({cartItams, setCartItams}) => {
   const [prodect, setProdect] = useState([]);
   const [secrch, setSecrch] = useSearchParams()
 
@@ -17,7 +17,7 @@ const MenuItems = () => {
   return (
     <section>
       {prodect.map((prodect) => (
-        <ProdectCard prodect ={prodect}/>
+        <ProdectCard prodect ={prodect} cartItams = {cartItams} setCartItams = {setCartItams}/>
       ))}
     </section>
   );

@@ -4,10 +4,10 @@ import MenuBar from "../components/MenuBar";
 import "./menu.css";
 
 
-const Menu = () => {
+const Menu = ({cartItams, setCartItams}) => {
   return (
     <div className="menu">
-      <MenuBar />
+      <MenuBar cartItams = {cartItams} setCartItams = {setCartItams}/>
     </div>
   );
 };

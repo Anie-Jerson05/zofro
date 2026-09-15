@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./order.css";
-
+import Cart from '../components/Cart'
 import emptyGirl from "../assets/empty-girl.png";
 import logo from "../assets/Zofro-logo.png";
 
-const Order = () => {
+const Order = ({cartItams,setCartItams}) => {
   const [activeTab, setActiveTab] = useState("pay");
 
   return (
@@ -27,12 +27,14 @@ const Order = () => {
       </div>
 
       {/* PAY TAB */}
-      {activeTab === "pay" && (
+      {activeTab === "pay" && cartItams.length == 0 ?(
         <div className="empty-cart">
           <h1>You have a empty cart</h1>
 
           <img src={emptyGirl} alt="Empty Cart" />
         </div>
+      ):(
+        <Cart cartItams = {cartItams} setCartItams = {setCartItams}/>
       )}
 
       {/* ZOFRO PAY TAB */}

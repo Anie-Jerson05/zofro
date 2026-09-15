@@ -9,7 +9,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { CiCoffeeCup } from "react-icons/ci";
 
-const MenuBar = () => {
+const MenuBar = ({cartItams,setCartItams}) => {
   const [activeButton, setActiveButton] = useState(null);
 
   return (
@@ -56,8 +56,8 @@ const MenuBar = () => {
       </div>
       {activeButton === "favorite" && <Favorite />}
       {activeButton === "coffee" && <Coustomize />}
-      {activeButton === "search" && <MenuItems />}
-      {activeButton === null && <MenuItems />}
+      {activeButton === "search" && <MenuItems cartItams = {cartItams} setCartItams = {setCartItams}/>}
+      {activeButton === null && <MenuItems cartItams = {cartItams} setCartItams = {setCartItams}/>}
     </div>
   );
 };

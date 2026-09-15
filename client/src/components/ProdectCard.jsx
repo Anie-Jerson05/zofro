@@ -1,26 +1,33 @@
 import "./prodectCart-And-cart.css";
 import { useState } from "react";
 
-const ProdectCard = ({ prodect }) => {
+const ProdectCard = ({ prodect, cartItams, setCartItams }) => {
   const [added, setAdded] = useState(false);
   const [qty, setQty] = useState(1);
 
   const incQty = () => {
-    setQty((s) =>  s + 1)
-  }
-  
+    setQty((s) => s + 1);
+  };
+
   const decQty = () => {
-    if(qty > 1)
-      setQty((s) => s - 1)
-  }
+    if (qty > 1) setQty((s) => s - 1);
+  };
 
   const handleAddItem = () => {
+    
+    const itemExist = cartItams.find((item) => item.prodect._id == prodect._id)
+    if(!itemExist){
+      const newItams = { prodect, qty };
+      setCartItams((state) => [...state, newItams]);
+    }
+
     setAdded(true);
 
     setTimeout(() => {
       setAdded(false);
     }, 2000);
   };
+  
   return (
     <div className="con">
       <div className="img-con">
