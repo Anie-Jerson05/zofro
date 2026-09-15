@@ -2,7 +2,6 @@ import { Fragment, useState } from "react";
 import "./prodectCart-And-cart.css";
 
 const Cart = ({ cartItams, setCartItams }) => {
-  const [remove, setRemove] = useState(false);
 
   const incQty = (item) => {
     const updateItam = cartItams.map((i) => {
@@ -26,12 +25,16 @@ const Cart = ({ cartItams, setCartItams }) => {
     }
   };
 
-  const handleRemoveItam = () => {
-    setRemove(true);
+  const handleRemoveItam = (item) => {
 
     setTimeout(() => {
-      setRemove(false);
-    }, 2000);
+      const updateItam = cartItams.filter((i) => {
+        if (i.prodect._id != item.prodect._id) {
+          return true;
+        }
+      });
+      setCartItams(updateItam);
+    }, 120);
   };
 
   return (
@@ -72,8 +75,8 @@ const Cart = ({ cartItams, setCartItams }) => {
                       <button onClick={() => decQty(item)}>−</button>
                     </div>
                     <div className="but">
-                      <button onClick={handleRemoveItam}>
-                        {remove ? "✓ Removed" : "Remove Itam"}
+                      <button onClick={() => handleRemoveItam(item)}>
+                        Remove Itam
                       </button>
                     </div>
                   </div>
@@ -85,8 +88,8 @@ const Cart = ({ cartItams, setCartItams }) => {
         <div className="order">
           <div className="order-con">
             <h2>Order Summary</h2>
-            <p>Items: {cartItams.length}</p>
-            <p>Total Price: $99</p>
+            <p>Items: {cartItams.reduce((acc,item) => (acc + item.qty), 0)}</p>
+            <p>Total Price: ${cartItams.reduce((acc,item) => (acc + item.prodect.price * item.qty), 0)}</p>
             <button className="order-but">Place Order</button>
           </div>
         </div>
